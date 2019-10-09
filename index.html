@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystals Collector</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <h1 class="jumbotron text-center pt-2 pb-2">Crystal Collector!</h1>
@@ -22,30 +23,28 @@
     </div>
 
     <div class="row mt-2 mb-2 text-center">
-        <div class="col-lg-12">
-            <h1 class="jumbtron text-center" id="target">Target Number</h1>
+        <div class="col-lg-6">
+            <h1 class="text-center" id="target">Target: </h1>
+            <h1 class="text-center" id="score">Score: 0</h1>    
+        </div>
+        <div class="col-lg-6">
+            <h1 id="win-text">Wins: 0</h1>
+            <h1 id="lose-text">Losses: 0</h1>
         </div>
     </div>
-
 
     <div class="row mx-auto p-auto mb-3mt-2 ">
         <div class="col-lg-12 text-center">
-            <img src="assets/images/crystal1.jpg" width="150px" id="crystal1" class="btn img-fluid rounded m-2 border">
-            <img src="assets/images/crystal2.jpg" width="200px" id="crystal2" class="btn img-fluid rounded m-2 border">
-            <img src="assets/images/crystal3.jpg" width="200px" id="crystal3" class="btn img-fluid rounded m-2 border">
-            <img src="assets/images/crystal4.jpg" width="200px" id="crystal4" class="btn img-fluid rounded m-2 border">
+            <img src="assets/images/crystal1.jpg" width="150px" id="crystal1" class="btn rounded m-2 border">
+            <img src="assets/images/crystal2.jpg" width="200px" id="crystal2" class="btn rounded m-2 border">
+            <img src="assets/images/crystal3.jpg" width="200px" id="crystal3" class="btn rounded m-2 border">
+            <img src="assets/images/crystal4.jpg" width="200px" id="crystal4" class="btn rounded m-2 border">
         </div>
     </div>
 
-
-
-
-
-
-
 </div>
-
-
 
 </body>
 </html>
+
+<script src="assets/javascript/game.js"></script>
