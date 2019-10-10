@@ -9,14 +9,8 @@ $(document).ready(function() {
     var crystalThree;
     var crystalFour;
     var targetPoints;
-    
-    //grab needed dom elements
-    var winText = document.getElementById("win-text");
-    var loseText = document.getElementById("lose-text");
-    var scoreText = document.getElementById("score");
-    var targetText = document.getElementById("target");
 
-    //initializes the game, assigns random values
+    //initializes the game, assigns random values. function also used to restart the game
     clearGame();
 
     $(".btn").on("click",function() {
@@ -35,7 +29,7 @@ $(document).ready(function() {
         if(currentPoints > targetPoints)
         {
             loseCount++;
-            loseText.textContent = "Losses: " + loseCount;
+            $("#lose-text").text("Losses: " + loseCount);
             clearGame();
         }
 
@@ -43,7 +37,7 @@ $(document).ready(function() {
         else if(currentPoints === targetPoints)
         {
             winCount++;
-            winText.textContent = "Wins: " + winCount;
+            $("#win-text").text("Wins: " + winCount);
             clearGame();
         }
        
@@ -53,13 +47,13 @@ $(document).ready(function() {
 
     function refreshStats()
     {
-        scoreText.textContent = "Score: " +currentPoints;
+        $("#score-text").text("Score: " + currentPoints);
     }
 
     function clearGame()
     {
         targetPoints = Math.floor(Math.random() * 120) + 19;
-        targetText.textContent = "Target: " + targetPoints;
+        $("#target-text").text("Target: " + targetPoints);
         currentPoints = 0;
         crystalOne = Math.floor(Math.random() * 12) + 1;
         crystalTwo = Math.floor(Math.random() * 12) + 1;
