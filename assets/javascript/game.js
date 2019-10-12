@@ -56,16 +56,16 @@ $(document).ready(function() {
 
     function clearGame()
     {
-        targetPoints = Math.floor(Math.random() * 120) + 19;
+        targetPoints = Math.floor(Math.random() * 131) + 20;
         $("#target-text").text("Target: " + targetPoints);
         currentPoints = 0;
-        crystalOne = Math.floor(Math.random() * 12) + 1;
+        crystalOne = Math.floor(Math.random() * 12) + 8;
         $("#caption1").text(crystalOne);
-        crystalTwo = Math.floor(Math.random() * 12) + 1;
+        crystalTwo = Math.floor(Math.random() * 12) + 8;
         $("#caption2").text(crystalTwo);
-        crystalThree = Math.floor(Math.random() * 12) + 1;
+        crystalThree = Math.floor(Math.random() * 12) + 8;
         $("#caption3").text(crystalThree);
-        crystalFour = Math.floor(Math.random() * 12) + 1;
+        crystalFour = Math.floor(Math.random() * 12) + 8;
         $("#caption4").text(crystalFour);
         solution = "";
         solved = false;
