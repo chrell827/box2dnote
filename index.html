@@ -11,6 +11,9 @@
         body {
             background: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/argyle.png");
         }
+        .figure-caption {
+            visibility: hidden;
+        }
     </style>
 </head>
 <body>
@@ -39,11 +42,35 @@
     </div>
 
     <div class="row mx-auto p-auto mb-3mt-2 ">
+        <div class="col-lg-3 text-center">
+            <img src="assets/images/crystal1.jpg" width="200px" height="200px" id="crystal1" class="btn rounded m-2 border">
+            <figcaption id="caption1" class="figure-caption text-white">1</figcaption>
+        </div>
+        <div class="col-lg-3 text-center">
+            <img src="assets/images/crystal2.jpg" width="200px" height="200px" id="crystal2" class="btn rounded m-2 border">
+            <figcaption id="caption2" class="figure-caption text-white">2</figcaption>
+        </div>
+        <div class="col-lg-3 text-center">
+                <img src="assets/images/crystal3.jpg" width="200px" height="200px" id="crystal3" class="btn rounded m-2 border">
+                <figcaption id="caption3" class="figure-caption text-white">3</figcaption>
+        </div>
+        <div class="col-lg-3 text-center">
+            <img src="assets/images/crystal4.jpg" width="200px" height="200px" id="crystal4" class="btn rounded m-2 border">
+            <figcaption id="caption4" class="figure-caption text-white">4</figcaption>
+        </div>
+        
+    </div>
+    <hr>
+    <div class="row mx-auto p-auto mb-3 mt-2 ">
         <div class="col-lg-12 text-center">
-            <img src="assets/images/crystal1.jpg" width="150px" id="crystal1" class="btn rounded m-2 border">
-            <img src="assets/images/crystal2.jpg" width="200px" id="crystal2" class="btn rounded m-2 border">
-            <img src="assets/images/crystal3.jpg" width="200px" id="crystal3" class="btn rounded m-2 border">
-            <img src="assets/images/crystal4.jpg" width="200px" id="crystal4" class="btn rounded m-2 border">
+            <button id="hint">Show crystal values(Only if you're bad at this.)</button>
+        </div>
+    </div>
+
+    <div class="row mx-auto p-auto mb-3 mt-2 ">
+        <div class="col-lg-12 text-center">
+            <button id="solver">Show Solution(Only if you're reaaaallyyy bad at this.)</button>
+            <p class="text-white mt-2" id="solve-text"></p>
         </div>
     </div>
 

@@ -10,6 +10,10 @@ $(document).ready(function() {
     var crystalFour;
     var targetPoints;
 
+    //variables for the solution
+    var solution = "";
+    var solved = false;
+
     //initializes the game, assigns random values. function also used to restart the game
     clearGame();
 
@@ -56,9 +60,51 @@ $(document).ready(function() {
         $("#target-text").text("Target: " + targetPoints);
         currentPoints = 0;
         crystalOne = Math.floor(Math.random() * 12) + 1;
+        $("#caption1").text(crystalOne);
         crystalTwo = Math.floor(Math.random() * 12) + 1;
+        $("#caption2").text(crystalTwo);
         crystalThree = Math.floor(Math.random() * 12) + 1;
+        $("#caption3").text(crystalThree);
         crystalFour = Math.floor(Math.random() * 12) + 1;
+        $("#caption4").text(crystalFour);
+        solution = "";
+        solved = false;
+        $(".figure-caption").css({visibility: "hidden"});
+        $("#solve-text").empty();
+    }
+    
+    //button to show crystal value
+    $("#hint").on("click",function(){
+        $(".figure-caption").css({visibility: "visible"});
+    })
+
+    //button to for the solving algorithm
+    $("#solver").on("click",function(){
+        solve("",0);
+        if(solution === "")
+            solution = "No solution";
+        $("#solve-text").text(solution);
+    })
+    
+    //algorith that shows the shortest solution
+    function solve(currSol, tally)
+    {   
+        if(tally === targetPoints)
+        {
+            if(solution === "")
+                solution = currSol;
+            else if(currSol.length < solution.length)
+                solution = currSol;
+        }
+        
+        if((tally + crystalOne) <= targetPoints)
+            solve(currSol + "1, ", tally + crystalOne);
+        if((tally + crystalTwo) <= targetPoints)
+            solve(currSol + "2, ", tally + crystalTwo);
+        if((tally + crystalThree) <= targetPoints)
+            solve(currSol + "3, ", tally + crystalThree);
+        if((tally + crystalFour) <= targetPoints)
+            solve(currSol + "4, ", tally + crystalFour);
     }
 
 });    
